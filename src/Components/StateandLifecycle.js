@@ -19,10 +19,10 @@ class StateandLifecycle extends Component {
     componentDidCatch(){
         this.setState({err:true})
     }
-    // componentDidUpdate(prevprops,prevstate){
-    //    console.log(prevprops,prevstate);
+    componentDidUpdate(prevprops,prevstate){
+       console.log(prevprops,prevstate);
         
-    // }
+    }
     render() {
         if(this.state.count===5){
             throw new Error('Caused manualy')

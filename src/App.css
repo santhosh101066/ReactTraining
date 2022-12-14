@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+.options{
+ padding-left: 0;
+  margin: auto;
+  list-style: none;
+  width: max-content;
+  position: static;
+  box-shadow: 0px 0px 10px black;
+}
+.options li:hover{
+  cursor: pointer;
+  background-color: rgb(220, 220, 220);
+}
+.options li{
+  width: 100px;
+}
