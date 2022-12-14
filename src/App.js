@@ -1,16 +1,16 @@
 import './App.css';
-import ClassComp from './Classes/ClassComp';
-import ConditionalRendering from './Classes/ConditionalRendering';
-import ErrorFinder from './Classes/ErrorFinder';
-import Forms from './Classes/Forms';
-import FunctionComp from './Classes/FunctionComp';
-import HandlingEvents from './Classes/HandlingEvents';
-import Helloworld from './Classes/Helloworld';
-import JSXtraining from './Classes/JSXtraining';
-import LiftingStateup from './Classes/LiftingStateup';
-import ListandKeys from './Classes/ListandKeys';
-import RenderingDom from './Classes/RenderingDom';
-import StateandLifecycle from './Classes/StateandLifecycle';
+import ClassComp from './Components/ClassComp';
+import ConditionalRendering from './Components/ConditionalRendering';
+import ErrorFinder from './Components/ErrorFinder';
+import Forms from './Components/Forms';
+import FunctionComp from './Components/FunctionComp';
+import HandlingEvents from './Components/HandlingEvents';
+import Helloworld from './Components/Helloworld';
+import JSXtraining from './Components/JSXtraining';
+import LiftingStateup from './Components/LiftingStateup';
+import ListandKeys from './Components/ListandKeys';
+import RenderingDom from './Components/RenderingDom';
+import StateandLifecycle from './Components/StateandLifecycle';
 
 function App() {
   return (

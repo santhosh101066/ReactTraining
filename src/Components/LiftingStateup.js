@@ -3,15 +3,18 @@ import React, { Component } from 'react';
 class LiftingStateup extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            age:0
+        this.state = {
+            age: ''
         }
     }
-    
+    // shouldComponentUpdate(){
+    //     return false
+    // }
+
     render() {
         return (
             <div>
-                <input type={'number'} onChange={(e)=>this.setState({age:e.target.value})}></input>
+                <input type={'number'} onChange={(e) => this.setState({ age: e.target.value })}></input>
                 <MajorDetector age={this.state.age}></MajorDetector>
             </div>
         );
@@ -20,12 +23,14 @@ class LiftingStateup extends Component {
 
 export default LiftingStateup;
 
-function MajorDetector(props){
-    // if(props.age==0)
-    if(props.age>=18){
+function MajorDetector(props) {
+    if (props.age === '' ) {
+        return <div>Enter the age to display</div>
+    }
+    else if (props.age >= 18) {
         return <div>This person is Major</div>
     }
-    else{
+    else {
         return <div>This person is Minor</div>
     }
 }
