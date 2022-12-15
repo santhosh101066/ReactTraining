@@ -1,13 +1,14 @@
 import React, { Component, createRef, Fragment } from 'react';
+import { setTheme } from '../../ThemesForall';
 
 class Accessibility extends Component {
-
+    static contextType=setTheme
     render() {
         let products = [{ id: 1, name: 'Orange' }, { id: 2, name: 'Apple' }, { id: 3, name: 'Grape' }]
         let fragment = products.map(val => <Products key={val.id} product={val}></Products>)
         let next = products.map(val => <Fragment key={val.id}><dt>{val.id}</dt> <dd>{val.name}</dd></Fragment>)
         return (
-            <div>
+            <div style={this.context}>
                 <br />
                 <br />
                 <label htmlFor='sample'>Sample Input : </label>
@@ -63,7 +64,7 @@ class MouseEvent extends Component {
     }
     render() {
         return (
-            <div ref={this.toggler}>
+            <div  ref={this.toggler}>
                 <button onClick={this.showOptions} aria-haspopup='true' aria-expanded={this.state.isClicked}>Select Option</button>
                 {this.state.isClicked && 
                 <ul className='options'>

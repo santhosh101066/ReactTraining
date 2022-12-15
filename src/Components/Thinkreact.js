@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
+import { setTheme } from '../ThemesForall';
 
 class Thinkreact extends Component {
-
+    static contextType=setTheme
     render() {
         let Products = [{ categary: 'Mobile', name: 'Samsung', stock: true, price: '₹10000' },
         { categary: 'Mobile', name: 'Redmi', stock: false, price: '₹15000' },
@@ -10,7 +11,7 @@ class Thinkreact extends Component {
         { categary: 'Laptop', name: 'Lenovo', stock: false, price: '₹40000' },
         { categary: 'Laptop', name: 'Dell', stock: true, price: '₹70000' }]
         return (
-            <div>
+            <div style={this.context}>
                 <br></br>
                 <Search product={Products} />
                 <br></br>

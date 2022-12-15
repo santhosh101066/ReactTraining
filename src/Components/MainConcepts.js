@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { setTheme } from '../ThemesForall';
 import ClassComp from './ClassComp';
 import Compositionvsinheritance from './Compositionvsinheritance';
 import ConditionalRendering from './ConditionalRendering';
@@ -14,9 +15,11 @@ import RenderingDom from './RenderingDom';
 import StateandLifecycle from './StateandLifecycle';
 import ChildComponent from './Subcomponents/ChildComponent';
 class MainConcepts extends Component {
+    static contextType=setTheme
     render() {
         return (
-            <div>
+            <div style={this.context}>
+                <br></br>
                 <Helloworld />
                 <hr></hr>
                 <h1>JSX</h1>
