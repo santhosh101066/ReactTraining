@@ -14,8 +14,9 @@ import ListandKeys from './ListandKeys';
 import RenderingDom from './RenderingDom';
 import StateandLifecycle from './StateandLifecycle';
 import ChildComponent from './Subcomponents/ChildComponent';
+import Portals from './ForwardRefs.js/Portals';
 class MainConcepts extends Component {
-    static contextType=setTheme
+    static contextType = setTheme
     render() {
         return (
             <div style={this.context}>
@@ -60,6 +61,7 @@ class MainConcepts extends Component {
                 <hr></hr>
                 <h1>Composition vs Inheritance</h1>
                 <Compositionvsinheritance objectPassing={<LiftingStateup />}><ChildComponent key={20} /></Compositionvsinheritance>
+                <Portals />
             </div>
         );
     }

@@ -71,7 +71,7 @@ class ViewTable extends Component {
             else {
                 previous = val.categary
 
-                return (<><Categary key={val.categary} name={val.categary} /><Rows key={val.name} product={val}></Rows></>)
+                return (<Fragment key={val.categary}><Categary name={val.categary} /><Rows  product={val}></Rows></Fragment>)
             }
         })
     }
@@ -88,7 +88,7 @@ class ViewTable extends Component {
     }
 }
 function Rows(props) {
-    return <Fragment><tr>{props.product.stock ? <td>{props.product.name}</td> : <td style={{ color: 'red' }}>{props.product.name}</td>}<td>{props.product.price}</td></tr></Fragment>
+    return <Fragment><tr >{props.product.stock ? <td>{props.product.name}</td> : <td style={{ color: 'red' }}>{props.product.name}</td>}<td>{props.product.price}</td></tr></Fragment>
 }
 function Categary(props) {
     return <Fragment><tr><th colSpan={2}>{props.name}</th></tr></Fragment>

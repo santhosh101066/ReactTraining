@@ -7,9 +7,12 @@ import Forward from './Components/ForwardRefs.js/Forward';
 import MainConcepts from './Components/MainConcepts';
 import Thinkreact from './Components/Thinkreact';
 import { setTheme as SetTheme, theme } from './ThemesForall'
+import HighOrder from './Components/HighOrderComponent/HighOrder';
+import MouseRender from './Components/RenderProps/MouseRender';
+import Uncontrolled from './Components/RenderProps/Uncontrolled';
 
 function App() {
-  let [display, setDisplay] = useState(<ContextImp />)
+  let [display, setDisplay] = useState(<Forward />)
   let [themes, setTheme] = useState(theme.light)
   function settheme(e) {
     if (e.target.checked) {
@@ -27,8 +30,13 @@ function App() {
       <button onClick={() => { setDisplay(<Codesplitting />) }} >Code-Splitting</button>
       <button onClick={() => { setDisplay(<ContextImp />) }} >ContextImp</button>
       <button onClick={() => { setDisplay(<Forward />) }} >Forward</button>
+      <button onClick={() => { setDisplay(<HighOrder />) }} >High Order Component</button>
+      <button onClick={() => { setDisplay(<MouseRender />) }} >Render props</button>
+      <button onClick={() => { setDisplay(<Uncontrolled />) }} >Uncontrolled Component</button>
+  
       <SetTheme.Provider value={themes}>
-        <input id='theme' type={'checkbox'} onChange={settheme}></input> <label htmlFor='theme' >Dark</label>
+        <input id='theme' type={'checkbox'} onChange={settheme}></input> <label htmlFor='theme' >Dark</label>{'  '}
+        <button onClick={() => { console.clear() }} >Clear Console</button>
         {display}
       </SetTheme.Provider>
 
