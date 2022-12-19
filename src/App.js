@@ -10,9 +10,12 @@ import { setTheme as SetTheme, theme } from './ThemesForall'
 import HighOrder from './Components/HighOrderComponent/HighOrder';
 import MouseRender from './Components/RenderProps/MouseRender';
 import Uncontrolled from './Components/RenderProps/Uncontrolled';
+import PropsType from './Components/RenderProps/PropsType';
+import MainHooks from './Components/Hooks/MainHooks';
+import UsingEffects from './Components/Hooks/UseingEffects';
 
 function App() {
-  let [display, setDisplay] = useState(<Forward />)
+  let [display, setDisplay] = useState(<UsingEffects />)
   let [themes, setTheme] = useState(theme.light)
   function settheme(e) {
     if (e.target.checked) {
@@ -33,7 +36,10 @@ function App() {
       <button onClick={() => { setDisplay(<HighOrder />) }} >High Order Component</button>
       <button onClick={() => { setDisplay(<MouseRender />) }} >Render props</button>
       <button onClick={() => { setDisplay(<Uncontrolled />) }} >Uncontrolled Component</button>
-  
+      <button onClick={() => { setDisplay(<PropsType id={1} name={'Sample'} fun={() => { return 1 }} />) }} >Prop types</button>
+      <button onClick={() => { setDisplay(<MainHooks />) }}>Hooks concept</button>
+      <button onClick={() => { setDisplay(<UsingEffects />) }}>UsingEffects</button>
+
       <SetTheme.Provider value={themes}>
         <input id='theme' type={'checkbox'} onChange={settheme}></input> <label htmlFor='theme' >Dark</label>{'  '}
         <button onClick={() => { console.clear() }} >Clear Console</button>
