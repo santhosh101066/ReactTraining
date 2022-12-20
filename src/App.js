@@ -4,7 +4,7 @@ import Accessibility from './Components/Accessibility/Accessibility';
 import Codesplitting from './Components/Codesplitting/Codesplitting';
 import ContextImp from './Components/Context/ContextImp';
 import Forward from './Components/ForwardRefs.js/Forward';
-import MainConcepts from './Components/MainConcepts';
+  import MainConcepts from './Components/MainConcepts';
 import Thinkreact from './Components/Thinkreact';
 import { setTheme as SetTheme, theme } from './ThemesForall'
 import HighOrder from './Components/HighOrderComponent/HighOrder';
@@ -13,9 +13,10 @@ import Uncontrolled from './Components/RenderProps/Uncontrolled';
 import PropsType from './Components/RenderProps/PropsType';
 import MainHooks from './Components/Hooks/MainHooks';
 import UsingEffects from './Components/Hooks/UseingEffects';
+import Axios from './Components/Hooks/Axios';
 
 function App() {
-  let [display, setDisplay] = useState(<UsingEffects />)
+  let [display, setDisplay] = useState(<Axios />)
   let [themes, setTheme] = useState(theme.light)
   function settheme(e) {
     if (e.target.checked) {
@@ -39,6 +40,7 @@ function App() {
       <button onClick={() => { setDisplay(<PropsType id={1} name={'Sample'} fun={() => { return 1 }} />) }} >Prop types</button>
       <button onClick={() => { setDisplay(<MainHooks />) }}>Hooks concept</button>
       <button onClick={() => { setDisplay(<UsingEffects />) }}>UsingEffects</button>
+      <button onClick={() => { setDisplay(<Axios />) }}>Axios</button>
 
       <SetTheme.Provider value={themes}>
         <input id='theme' type={'checkbox'} onChange={settheme}></input> <label htmlFor='theme' >Dark</label>{'  '}

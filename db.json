@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "HTML",
+      "web": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    {
+      "id": 2,
+      "title": "CSS",
+      "web": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+      "id": 3,
+      "title": "JavaScript",
+      "web": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+      "id": 4,
+      "title": "React",
+      "web": "https://reactjs.org/"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

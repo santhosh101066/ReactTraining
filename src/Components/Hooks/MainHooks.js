@@ -29,7 +29,7 @@ export default MainHooks;
 function UsingState() {
     let [count, setCount] = useState(0)
 
-    return <div><br /> <button onClick={() => setCount((prev) => prev - 1)}>-</button>{' '}count: {count}{' '}<button onClick={() => setCount((prev) => prev + 1)}>+</button></div>
+    return <div><br /><button onClick={() => setCount((prev) => prev - 1)}>-</button><span data-testid="checkcounter">count: {count}</span><button onClick={() => setCount((prev) => prev + 1)}>+</button></div>
 }
 function UsingEffects() {
     let [count, setCount] = useState(0)
