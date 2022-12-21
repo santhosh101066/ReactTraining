@@ -2,7 +2,6 @@ import { cleanup,screen ,render } from '@testing-library/react';
 import App from './App';
 import { unmountComponentAtNode } from 'react-dom';
 import { act } from 'react-dom/test-utils';
-import MainConcepts from './Components/MainConcepts';
 test('renders learn Main concept', () => {
   render(<App />);
    const linkElement = screen.getByText(/Main concepts/i);
